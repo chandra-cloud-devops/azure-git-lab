@@ -78,9 +78,7 @@ NGINX
  
 rm -f /etc/nginx/sites-enabled/default
  
-ln -sfn /etc/nginx/sites-available/studentapp \
-
-    /etc/nginx/sites-enabled/studentapp
+ln -sfn /etc/nginx/sites-available/studentapp /etc/nginx/sites-enabled/studentapp
  
 systemctl daemon-reload
 
