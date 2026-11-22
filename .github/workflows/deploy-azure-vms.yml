@@ -24,8 +24,8 @@ jobs:
       fail-fast: true
       matrix:
         vm:
-          - vm-web-01
-          - vm-web-02
+          - vm-6f-app-01
+          - vm-6f-app-02
  
     steps:
       - name: Checkout code
