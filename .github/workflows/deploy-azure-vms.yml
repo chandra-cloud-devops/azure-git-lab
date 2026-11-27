@@ -15,7 +15,7 @@ concurrency:
  
 jobs:
   deploy:
-    name: Deploy to ${{ matrix.vm }}
+    name: Deploy to ${{ matrix.display_name }}
     runs-on: ubuntu-latest
     timeout-minutes: 40
  
@@ -23,9 +23,11 @@ jobs:
       max-parallel: 1
       fail-fast: true
       matrix:
-        vm:
-          - vm-6f-app-01
-          - vm-6f-app-02
+        include:
+          - vm: vm-6f-app-01
+            display_name: VM01
+          - vm: vm-6f-app-02
+            display_name: VM02
  
     steps:
       - name: Checkout code
